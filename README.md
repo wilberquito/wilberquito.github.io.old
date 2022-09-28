@@ -1,4 +1,4 @@
-# wilberquito.github.io/
+# wilberquito.github.io
 
-<img src="https://raw.githubusercontent.com/wilberquito/wilberquito/main/github/page.png" width="100%">
+<img src="https://raw.githubusercontent.com/wilberquito/wilberquito.github.io/main/github/page.png" width="100%">
 
