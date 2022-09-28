@@ -1,14 +1,13 @@
 @import "./../../style/variables";
 
 
-$side: 120px;
-$l: 90px;
-$num: 10;
-$dur: 10s;
+$bigSide: 250px;
+$side: 50px;
+$l: 300px;
 // $baseColor: red;
 // $squeletonColor: #e0e6ec;
-$baseColor: $highlighColor;
-$squeletonColor: $sphereSqueleton;
+$baseColor: $sphereBaseColor;
+$squeletonColor: $sphereSqueletonColor;
 
 @mixin plane($w, $h) {
     width: $w;
@@ -25,6 +24,15 @@ $squeletonColor: $sphereSqueleton;
     perspective: $p;
 }
 
+@mixin shortView($p) {
+    position: absolute;
+    top: 33vh;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    perspective: $p;
+}
+
 @mixin center {
     position: absolute;
     top: 0;
@@ -35,7 +43,7 @@ $squeletonColor: $sphereSqueleton;
 }
 
 .view {
-    @include view(400);
+    @include shortView(400);
 }
 
 .plane {
@@ -90,5 +98,14 @@ $squeletonColor: $sphereSqueleton;
     }
     100% {
         transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); /* You can add global styles to this file, and also import other style files */
+    }
+}
+
+@media (min-width: 1024px) {
+    .view {
+        @include view(300px);
+    }
+    .plane {
+        @include plane($bigSide, $bigSide);
     }
 }

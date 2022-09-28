@@ -1,10 +1,12 @@
 @import "./../../style/variables";
 
 h1 {
+    font-size: 3rem;
     margin: 0;
 }
 
 h2 {
+    font-size: 1.25rem;
     margin: 0;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
@@ -15,5 +17,8 @@ h1, h2 {
 }
 
 .highligh {
-    color: $highlighColor;
+    color: $sphereSqueletonColor;
+    border-bottom: 2px solid $sphereSqueletonColor;
 }
+
+

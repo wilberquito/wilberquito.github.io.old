@@ -8,6 +8,10 @@
     justify-content: center;
 }
 
+.front app-base {
+    z-index: 9999;
+}
+
 @media (min-width: 1024px) {
     .front {
         color: red;
@@ -15,3 +19,4 @@
         padding-left: 15vw;
     }
 }
+
