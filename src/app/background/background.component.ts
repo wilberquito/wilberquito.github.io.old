@@ -14,6 +14,7 @@ export class BackgroundComponent implements AfterViewInit {
     ngAfterViewInit() {
         const matrix = <HTMLVideoElement> document.getElementById('matrix')
         matrix.muted = true;
+        matrix.loop = true;
     }
 }
 
