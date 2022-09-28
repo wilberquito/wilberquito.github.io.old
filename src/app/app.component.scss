@@ -8,9 +8,10 @@
     justify-content: center;
 }
 
-.front app-base {
+.wrapper {
+    display: flex;
+    flex-direction: column;
     z-index: 9999;
-    // text-align: center;
 }
 
 @media (min-width: 1024px) {
