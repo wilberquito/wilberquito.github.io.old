@@ -10,13 +10,19 @@
 
 .front app-base {
     z-index: 9999;
+    // text-align: center;
 }
 
 @media (min-width: 1024px) {
     .front {
-        color: red;
         justify-content: unset;
         padding-left: 15vw;
+    }
+}
+
+@media (max-width: 1023px) {
+    .front app-base {
+        text-align: center;
     }
 }
 
