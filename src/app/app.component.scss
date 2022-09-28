@@ -1,0 +1,17 @@
+.front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .front {
+        color: red;
+        justify-content: unset;
+        padding-left: 15vw;
+    }
+}

@@ -1,9 +1,14 @@
+@import "./../../style/variables";
+
+
 $side: 120px;
 $l: 90px;
 $num: 10;
 $dur: 10s;
-$baseColor: red;
-$squeletonColor: #e0e6ec;
+// $baseColor: red;
+// $squeletonColor: #e0e6ec;
+$baseColor: $highlighColor;
+$squeletonColor: $sphereSqueleton;
 
 @mixin plane($w, $h) {
     width: $w;

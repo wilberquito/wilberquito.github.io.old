@@ -1,7 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-dodecaedron',
+  selector: 'app-dodecahedron',
   styleUrls: ['./dodecahedron.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -17,4 +17,5 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
     </div>
   `
 })
-export class DodecaedronComponent { }
+export class DodecahedronComponent { }
+
