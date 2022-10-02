@@ -13,6 +13,7 @@ h2 {
 
 h1, h2 {
     color: $color1;
+    font-family: monospace;
 }
 
 .highligh {
@@ -32,7 +33,6 @@ h1, h2 {
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
-    font-family: monospace;
     font-size: 1.5rem;
 }
 
