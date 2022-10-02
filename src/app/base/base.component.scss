@@ -16,8 +16,19 @@ h1, h2 {
 }
 
 .highligh {
+    cursor: pointer;
     color: $sphereSqueletonColor;
+    position: relative;
+}
+
+.highligh:after {
+    margin-top: 0.1rem;
+    content: '';
     border-bottom: 2px solid $sphereSqueletonColor;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 @media (min-width: 1024px) {
