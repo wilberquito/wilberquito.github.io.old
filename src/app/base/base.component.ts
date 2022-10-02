@@ -1,17 +1,35 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-base',
   styleUrls: ['./base.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
           <div>
             <h1>Wilber Quito</h1>
             <h2>I am  <div class="typing__wrapper">
-<span class="typing highligh">an Engineer.</span>
+                <span *ngIf="activeIndex == 0" class="typing highligh student">{{messages[0]}}</span>
+                <span *ngIf="activeIndex == 1" class="typing highligh engineer">{{messages[1]}}</span>
+                <span *ngIf="activeIndex == 2" class="typing highligh scientific">{{messages[2]}}</span>
             </div>  </h2>
           </div>
               `
 })
-export class BaseComponent { }
+export class BaseComponent { 
+
+     activeIndex = 0;
+     messages = [
+         'an Student.',
+         'an Engineer.',
+         'a Data Scientist.'
+     ]
+     
+     ngAfterViewInit() {
+         setInterval(this.nextMessage.bind(this), 5000)
+     }
+
+     private nextMessage() {
+         this.activeIndex ++;
+         this.activeIndex = this.activeIndex % this.messages.length;
+     }
+}
 
