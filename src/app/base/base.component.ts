@@ -7,7 +7,9 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   template: `
           <div>
             <h1>Wilber Quito</h1>
-            <h2>I am <span class="highligh">an Engineer</span></h2>
+            <h2>I am  <div class="typing__wrapper">
+<span class="typing highligh">an Engineer.</span>
+            </div>  </h2>
           </div>
               `
 })
