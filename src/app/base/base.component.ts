@@ -18,7 +18,7 @@ export class BaseComponent {
 
      activeIndex = 0;
      messages = [
-         'an Student.',
+         'a Student.',
          'an Engineer.',
          'a Data Scientist.'
      ]
