@@ -4,8 +4,7 @@
 $bigSide: 200px;
 $side: 50px;
 $l: 300px;
-// $baseColor: red;
-// $squeletonColor: #e0e6ec;
+$shortL: 100px;
 $baseColor: $sphereBaseColor;
 $squeletonColor: $sphereSqueletonColor;
 
@@ -71,16 +70,16 @@ $squeletonColor: $sphereSqueletonColor;
                 width: 10%;
                 height: 10%;
                 border-radius: 100%;
-                background: rgba($baseColor, 1);
+                background: rgba($squeletonColor, 1);
                 box-sizing: border-box;
-                box-shadow: 0 0 60px 2px rgba($baseColor, 1);
+                box-shadow: 0 0 60px 2px rgba($squeletonColor, 1);
             }
 
             &::before {
-                transform: translateZ(-$l);
+                transform: translateZ(-$shortL);
             }
             &::after {
-                transform: translateZ($l);
+                transform: translateZ($shortL);
             }
 
             @for $i from 1 through 5 {
@@ -105,7 +104,23 @@ $squeletonColor: $sphereSqueletonColor;
     .view {
         @include view(300px);
     }
+
     .plane {
         @include plane($bigSide, $bigSide);
+        &.main {
+            @include center;
+            transform: rotateX(60deg) rotateZ(-30deg);
+            animation: rotate 18s infinite linear;
+
+            .circle {
+               &::before {
+                    transform: translateZ(-$l);
+                }
+                &::after {
+                    transform: translateZ($l);
+                }
+            }
+        }
+
     }
 }
