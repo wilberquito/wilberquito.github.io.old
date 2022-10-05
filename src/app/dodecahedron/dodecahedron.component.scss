@@ -25,10 +25,10 @@ $squeletonColor: $sphereSqueletonColor;
 
 @mixin shortView($p) {
     position: absolute;
-    top: 33vh;
+    top: auto;
     left: 0;
     right: 0;
-    bottom: auto;
+    bottom: 25vh;
     perspective: $p;
 }
 
