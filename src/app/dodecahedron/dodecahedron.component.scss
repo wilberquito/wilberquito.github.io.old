@@ -46,6 +46,7 @@ $squeletonColor: $sphereSqueletonColor;
 }
 
 .plane {
+    cursor: pointer;
     @include plane($side, $side);
     &.main {
         @include center;
