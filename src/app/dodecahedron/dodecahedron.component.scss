@@ -1,12 +1,15 @@
 @import "./../../style/variables";
 
 
-$bigSide: 200px;
-$side: 50px;
-$l: 300px;
-$shortL: 100px;
+$side: 40px;
+$mediumSide: 35px;
+$shortSide: 30px;
+$planeDistance: 200px;
+$particulesDistance: 300px;
+$shortParticulesDistance: 80px;
 $baseColor: $sphereBaseColor;
 $squeletonColor: $sphereSqueletonColor;
+$perspective: 400px;
 
 @mixin plane($w, $h) {
     width: $w;
@@ -14,22 +17,22 @@ $squeletonColor: $sphereSqueletonColor;
     transform-style: preserve-3d;
 }
 
-@mixin view($p) {
+@mixin view() {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    perspective: $p;
+    perspective: $perspective;
 }
 
-@mixin shortView($p) {
+@mixin shortView() {
     position: absolute;
     top: auto;
     left: 0;
     right: 0;
     bottom: 25vh;
-    perspective: $p;
+    perspective: $perspective;
 }
 
 @mixin center {
@@ -42,20 +45,20 @@ $squeletonColor: $sphereSqueletonColor;
 }
 
 .view {
-    @include shortView(400);
+    @include shortView();
 }
 
 .plane {
     cursor: pointer;
-    @include plane($side, $side);
+    @include plane($shortSide, $shortSide);
     &.main {
         @include center;
         transform: rotateX(60deg) rotateZ(-30deg);
         animation: rotate 20s infinite linear;
 
         .circle {
-            width: $side;
-            height: $side;
+            width: $shortSide;
+            height: $shortSide;
             position: absolute;
             transform-style: preserve-3d;
             border-radius: 100%;
@@ -68,8 +71,8 @@ $squeletonColor: $sphereSqueletonColor;
                 content: "";
                 display: block;
                 @include center;
-                width: 10%;
-                height: 10%;
+                width: 15%;
+                height: 15%;
                 border-radius: 100%;
                 background: rgba($squeletonColor, 1);
                 box-sizing: border-box;
@@ -77,10 +80,10 @@ $squeletonColor: $sphereSqueletonColor;
             }
 
             &::before {
-                transform: translateZ(-$shortL);
+                transform: translateZ(-$shortParticulesDistance);
             }
             &::after {
-                transform: translateZ($shortL);
+                transform: translateZ($shortParticulesDistance);
             }
 
             @for $i from 1 through 5 {
@@ -101,27 +104,53 @@ $squeletonColor: $sphereSqueletonColor;
     }
 }
 
-@media (min-width: 1024px) {
-    .view {
-        @include view(300px);
+@media (min-width: 767px) {
+     .view {
+        @include shortView();
     }
-
     .plane {
-        @include plane($bigSide, $bigSide);
+        @include plane($mediumSide, $mediumSide); /* this makes the trajectoria */
         &.main {
             @include center;
             transform: rotateX(60deg) rotateZ(-30deg);
             animation: rotate 18s infinite linear;
 
             .circle {
-               &::before {
-                    transform: translateZ(-$l);
+                width: $side;
+                height: $side;
+                &::before {
+                    transform: translateZ(-$particulesDistance);
                 }
                 &::after {
-                    transform: translateZ($l);
+                    transform: translateZ($particulesDistance);
                 }
             }
         }
-
     }
 }
+
+@media (min-width: 1024px) {
+    .view {
+        @include view();
+    }
+    .plane {
+        @include plane($planeDistance, $planeDistance); /* this makes the trajectoria */
+        &.main {
+            @include center;
+            transform: rotateX(60deg) rotateZ(-30deg);
+            animation: rotate 18s infinite linear;
+
+            .circle {
+                width: $side;
+                height: $side;
+                &::before {
+                    transform: translateZ(-$particulesDistance);
+                }
+                &::after {
+                    transform: translateZ($particulesDistance);
+                }
+            }
+        }
+    }
+}
+
