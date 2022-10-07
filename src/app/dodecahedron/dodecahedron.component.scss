@@ -1,7 +1,7 @@
 @import "./../../style/variables";
 
 
-$side: 40px;
+$side: 60px;
 $mediumSide: 35px;
 $shortSide: 30px;
 $planeDistance: 200px;
@@ -9,7 +9,7 @@ $particulesDistance: 300px;
 $shortParticulesDistance: 80px;
 $baseColor: $sphereBaseColor;
 $squeletonColor: $sphereSqueletonColor;
-$perspective: 400px;
+$perspective: 300px;
 
 @mixin plane($w, $h) {
     width: $w;
@@ -49,7 +49,6 @@ $perspective: 400px;
 }
 
 .plane {
-    cursor: pointer;
     @include plane($shortSide, $shortSide);
     &.main {
         @include center;
@@ -96,6 +95,7 @@ $perspective: 400px;
 }
 
 @keyframes rotate {
+
     0% {
         transform: rotateX(0) rotateY(0) rotateZ(0);
     }
