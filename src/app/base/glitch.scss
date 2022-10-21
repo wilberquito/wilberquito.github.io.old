@@ -24,7 +24,7 @@
 .layers::before {
   top: 10px;
   left: 15px;
-  color: #e0287d;
+  color: #A7FC1A;
 }
 
 .layers::after {
@@ -368,7 +368,7 @@
 @keyframes font {
   0% {
     font-weight: 100;
-    color: #e0287d;
+    color: #A7FC1A;
     filter: blur(3px);
   }
 
@@ -392,7 +392,7 @@
 
   90% {
     font-weight: 500;
-    color: #e0287d;
+    color: #A7FC1A;
     filter: blur(6px);
   }
 }
