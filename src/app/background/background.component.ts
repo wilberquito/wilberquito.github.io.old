@@ -5,8 +5,9 @@ import { Component, AfterViewInit, ChangeDetectionStrategy } from '@angular/core
   styleUrls: ['./background.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <video muted="muted" autoplay="true" id="matrix" class="background__video" src="assets/background/binary_rain.mp4" >
-    </video>
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
       `
 })
 export class BackgroundComponent implements AfterViewInit { 
