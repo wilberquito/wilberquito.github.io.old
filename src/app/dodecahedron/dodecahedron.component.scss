@@ -1,10 +1,10 @@
 @import "./../../style/variables";
 
 
-$side: 60px;
-$mediumSide: 35px;
+$side: 45px;
+$mediumSide: 33px;
 $shortSide: 30px;
-$planeDistance: 200px;
+$planeDistance: 100px;
 $particulesDistance: 300px;
 $shortParticulesDistance: 80px;
 $baseColor: $sphereBaseColor;
@@ -116,8 +116,8 @@ $perspective: 300px;
             animation: rotate 18s infinite linear;
 
             .circle {
-                width: $side;
-                height: $side;
+                width: $mediumSide;
+                height: $mediumSide;
                 &::before {
                     transform: translateZ(-$particulesDistance);
                 }
@@ -134,7 +134,7 @@ $perspective: 300px;
         @include view();
     }
     .plane {
-        @include plane($planeDistance, $planeDistance); /* this makes the trajectoria */
+        @include plane($planeDistance * 2, $planeDistance); /* this makes the trajectoria */
         &.main {
             @include center;
             transform: rotateX(60deg) rotateZ(-30deg);
