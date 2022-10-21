@@ -2,10 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-base',
-  styleUrls: ['./base.component.scss'],
+  styleUrls: [
+      './base.component.scss',
+      './glitch.scss'
+  ],
   template: `
           <div>
-            <h1>Wilber Quito</h1>
+            <h1 class="hero glitch layers">
+                <span data-text="Wilber Quito">Wilber Quito</span>
+            </h1>
             <h2>I am  <div class="typing__wrapper">
                 <span *ngIf="activeIndex == 0" class="typing highligh student">{{messages[0]}}</span>
                 <span *ngIf="activeIndex == 1" class="typing highligh engineer">{{messages[1]}}</span>

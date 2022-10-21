@@ -1,7 +1,7 @@
 @import "./../../style/variables";
 
 
-$side: 45px;
+$side: 35px;
 $mediumSide: 33px;
 $shortSide: 30px;
 $planeDistance: 100px;
@@ -134,7 +134,7 @@ $perspective: 300px;
         @include view();
     }
     .plane {
-        @include plane($planeDistance * 2, $planeDistance); /* this makes the trajectoria */
+        @include plane(0, 0); /* this makes the trajectoria */
         &.main {
             @include center;
             transform: rotateX(60deg) rotateZ(-30deg);
