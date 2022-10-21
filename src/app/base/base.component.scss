@@ -3,18 +3,17 @@
 h1 {
     font-size: 1.5rem;
     margin: 0;
-    font-family: 'Silkscreen', cursive;
+    margin-bottom: 1rem;
 }
 
 h2 {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     margin: 0;
-    margin-top: 0.25rem;
 }
 
 h2 {
     color: $color1;
-    font-family: monospace;
+    font-family: 'Silkscreen', cursive;
 }
 
 .highligh {
@@ -50,29 +49,29 @@ h2 {
 
 @keyframes typing-student {
     70% {
-        width: 10ch;
+        width: 9ch;
     }
     to {
-        width: 10ch;
+        width: 9ch;
     }
 }
 
 @keyframes typing-engineer {
     70% {
-        width: 12ch;
+        width: 11ch;
     }
     to {
-        width: 12ch;
+        width: 11ch;
     }
 }
 
 
 @keyframes typing-scientific {
     70% {
-        width: 17ch;
+        width: 15ch;
     }
     to {
-        width: 17ch;
+        width: 15ch;
     }
 }
 
@@ -87,11 +86,14 @@ h2 {
     h1 {
         font-size: 2rem;
     }
+    h2 {
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 1024px) {
     h2 {
-        margin-top: 1.25rem;
+        margin-top: 0.5rem;
     }
     .typing__wrapper {
         justify-content: unset;
