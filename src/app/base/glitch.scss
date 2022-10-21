@@ -30,7 +30,7 @@
 .layers::after {
   top: 5px;
   left: -10px;
-  color: #1bc7fb;
+  color: green;
 }
 
 .paths {
@@ -380,7 +380,7 @@
 
   50% {
     font-weight: 300;
-    color: #1bc7fb;
+    color: green;
     filter: blur(2px);
   }
 
