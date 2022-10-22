@@ -113,7 +113,6 @@ $perspective: 300px;
         &.main {
             @include center;
             transform: rotateX(60deg) rotateZ(-30deg);
-            animation: rotate 18s infinite linear;
 
             .circle {
                 width: $mediumSide;
@@ -138,7 +137,6 @@ $perspective: 300px;
         &.main {
             @include center;
             transform: rotateX(60deg) rotateZ(-30deg);
-            animation: rotate 18s infinite linear;
 
             .circle {
                 width: $side;

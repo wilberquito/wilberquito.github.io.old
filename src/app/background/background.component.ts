@@ -10,12 +10,5 @@ import { Component, AfterViewInit, ChangeDetectionStrategy } from '@angular/core
         <div id="stars3"></div>
       `
 })
-export class BackgroundComponent implements AfterViewInit { 
-
-    ngAfterViewInit() {
-        const matrix = <HTMLVideoElement> document.getElementById('matrix')
-        matrix.muted = true;
-        matrix.loop = true;
-    }
-}
+export class BackgroundComponent { }
 
